@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-@Tag(name = "chargesession", description = "Charge Management management APIs")
+@Tag(name = "Charge Session", description = "Charge Management management APIs")
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
@@ -59,12 +59,12 @@ public class ChargeSessionController {
     @GetMapping("/chargesession")
     public ResponseEntity<List<ChargeSession>> getAllChargeSession(@RequestParam(required = false) String title) {
         try {
-            List<ChargeSession> chargeSessions = new ArrayList<ChargeSession>();
+            List<ChargeSession> chargeSessions = new ArrayList<>();
 
             if (title == null)
-                chargeSessionService.findAll().forEach(chargeSessions::add);
+                chargeSessions.addAll(chargeSessionService.findAll());
             else
-                chargeSessionService.findByTitleContaining(title).forEach(chargeSessions::add);
+                chargeSessions.addAll(chargeSessionService.findByTitleContaining(title));
 
             if (chargeSessions.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);

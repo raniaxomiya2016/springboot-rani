@@ -16,15 +16,8 @@ import lombok.ToString;
 @ToString
 public class ChargeSession {
 
-    public ChargeSession(String vin, Integer wattage, boolean completed) {
-        this.vin = vin;
-        this.wattage = wattage;
-        this.completed = completed;
-    }
-
     @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private long id = 0;
-
 
     @NotBlank
     @Size(min = 0, max = 20)
@@ -36,4 +29,10 @@ public class ChargeSession {
 
     @NotBlank
     private boolean completed;
+
+    public ChargeSession(String vin, Integer wattage, boolean completed) {
+        this.vin = vin;
+        this.wattage = wattage;
+        this.completed = completed;
+    }
 }

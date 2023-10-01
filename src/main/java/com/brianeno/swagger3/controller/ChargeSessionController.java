@@ -33,7 +33,7 @@ public class ChargeSessionController {
     @Autowired
     ChargeSessionService chargeSessionService;
 
-    @Operation(summary = "Create a new Charge Session", tags = {"chargesessions", "post"})
+    @Operation(summary = "Create a new Charge Session", tags = {"chargesession", "post"})
     @ApiResponses({
             @ApiResponse(responseCode = "201", content = {
                     @Content(schema = @Schema(implementation = ChargeSession.class), mediaType = "application/json")}),
@@ -49,7 +49,7 @@ public class ChargeSessionController {
         }
     }
 
-    @Operation(summary = "Retrieve all Charging Sessions", tags = {"chargesessions", "get", "filter"})
+    @Operation(summary = "Retrieve all Charging Sessions", tags = {"chargesession", "get", "filter"})
     @ApiResponses({
             @ApiResponse(responseCode = "200", content = {
                     @Content(schema = @Schema(implementation = ChargeSession.class), mediaType = "application/json")}),

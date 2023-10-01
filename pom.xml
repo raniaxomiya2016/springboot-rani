@@ -16,17 +16,17 @@
     <description>Spring Boot and Swagger 3 sample: Rest API Documentation</description>
     <properties>
         <java.version>17</java.version>
+        <webmvc-ui-version>2.2.0</webmvc-ui-version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.2.0</version>
+            <version>${webmvc-ui-version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

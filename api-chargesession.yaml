@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: brians-chargesession
+  description: Brian's Charging Session Sample REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: user:guest
+  definition:
+    $text: http://localhost:8080/brianeno-api-docs
